@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Sidebar.css";
 // import tradeLogo from "./logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,9 +12,21 @@ import {
   faAddressBook,
   faUserCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import routes from "../../routes";
 
 const Sidebar = () => {
+  const location = useLocation();
+  const [selectedTab, setSelectedTab] = useState("");
+
+  useEffect(() => {
+    routes.map((item) => {
+      if (item.path === location.pathname) {
+        setSelectedTab(item.name);
+      }
+    });
+  }, [location]);
+
   return (
     <>
       <div className="container-fluid d-flex flex-column flex-lg-row">
@@ -43,25 +55,45 @@ const Sidebar = () => {
             className="collapse navbar-collapse w-100"
             id="navbarSupportedContent"
           >
-            <ul className="navbar-nav w-100 d-flex flex-md-column text-center text-md-end">
+            <ul className="navbar-nav w-100 d-flex flex-md-column text-center text-md-end mt-5">
               <li>
                 <div className="container-fluid my-2">
                   <Link to="/" className="text-decoration-none">
-                    <div className="row height-button bg-orange navbar-border-radius">
+                    <div
+                      className={`row height-button  ${
+                        selectedTab.toUpperCase() === "DASHBOARD"
+                          ? "bg-orange"
+                          : "bg-white"
+                      }  navbar-border-radius`}
+                    >
                       <div className="col-2 text-start my-3">
                         <FontAwesomeIcon
                           icon={faArrowTrendUp}
-                          color="white"
+                          color={
+                            selectedTab.toUpperCase() === "DASHBOARD"
+                              ? "white"
+                              : "black"
+                          }
                           className="ps-2"
                         />
                       </div>
-                      <div className="col-8 color-white my-3 text-center">
+                      <div
+                        className={`col-8 ${
+                          selectedTab.toUpperCase() === "DASHBOARD"
+                            ? "color-white"
+                            : "color-black"
+                        }  my-3 text-center`}
+                      >
                         Dashboard
                       </div>
                       <div className="col-2 my-3 dropdown">
                         <FontAwesomeIcon
                           icon={faAngleDown}
-                          color="white"
+                          color={
+                            selectedTab.toUpperCase() === "DASHBOARD"
+                              ? "white"
+                              : "black"
+                          }
                           className=""
                         />
                         <div className="dropdown-content ">
@@ -131,29 +163,49 @@ const Sidebar = () => {
               </li>
               <li>
                 <div className="container-fluid my-2">
-                  <Link to="/trade" className="text-decoration-none">
-                    <div className="row height-button bg-orange navbar-border-radius">
+                  <Link to="/trade/trades" className="text-decoration-none">
+                    <div
+                      className={`row height-button  ${
+                        selectedTab.toUpperCase() === "TRADE"
+                          ? "bg-orange"
+                          : "bg-white"
+                      }  navbar-border-radius`}
+                    >
                       <div className="col-2 text-start my-3">
                         <FontAwesomeIcon
                           icon={faEye}
-                          color="white"
+                          color={
+                            selectedTab.toUpperCase() === "TRADE"
+                              ? "white"
+                              : "black"
+                          }
                           className="ps-2"
                         />
                       </div>
-                      <div className="col-8 color-white my-3 text-center">
+                      <div
+                        className={`col-8 ${
+                          selectedTab.toUpperCase() === "TRADE"
+                            ? "color-white"
+                            : "color-black"
+                        }  my-3 text-center`}
+                      >
                         Trading
                       </div>
                       <div className="col-2 my-3 dropdown border-none">
                         <FontAwesomeIcon
                           icon={faAngleDown}
-                          color="white"
+                          color={
+                            selectedTab.toUpperCase() === "TRADE"
+                              ? "white"
+                              : "black"
+                          }
                           className=""
                         />
                         <div className="dropdown-content">
                           <ul className="list-group bg-light navbar-border-radius-2">
                             <li className="list-group-item no-dec text-start">
                               <Link
-                                to="/trade/watchlist-trading"
+                                to="/trade/watchlist"
                                 className="text-start no-dec text-dark"
                               >
                                 Watchlist
@@ -161,7 +213,7 @@ const Sidebar = () => {
                             </li>
                             <li className="list-group-item no-dec text-start">
                               <Link
-                                to="/trade/trades-trading"
+                                to="/trade/trades"
                                 className="text-start no-dec text-dark"
                               >
                                 Trades
@@ -169,7 +221,7 @@ const Sidebar = () => {
                             </li>
                             <li className="list-group-item no-dec text-start">
                               <Link
-                                to="/trade/portfolio-trading"
+                                to="/trade/portfolio_position"
                                 className="text-start no-dec text-dark"
                               >
                                 Portfolio/Position
@@ -177,18 +229,10 @@ const Sidebar = () => {
                             </li>
                             <li className="list-group-item no-dec text-start">
                               <Link
-                                to="/trade/banned-trading"
+                                to="/trade/blocked_scripts"
                                 className="text-start no-dec text-dark"
                               >
                                 Banned/Blocked Scripts
-                              </Link>
-                            </li>
-                            <li className="list-group-item no-dec text-start">
-                              <Link
-                                to="/trade/margin-trading"
-                                className="text-start no-dec text-dark"
-                              >
-                                Margin Management
                               </Link>
                             </li>
                           </ul>
@@ -200,29 +244,49 @@ const Sidebar = () => {
               </li>
               <li>
                 <div className="container-fluid my-2">
-                  <Link to="/forex" className="text-decoration-none">
-                    <div className="row height-button bg-orange navbar-border-radius">
+                  <Link to="/forex/trades" className="text-decoration-none">
+                    <div
+                      className={`row height-button  ${
+                        selectedTab.toUpperCase() === "FOREX"
+                          ? "bg-orange"
+                          : "bg-white"
+                      }  navbar-border-radius`}
+                    >
                       <div className="col-2 text-start my-3">
                         <FontAwesomeIcon
                           icon={faDollarSign}
-                          color="white"
+                          color={
+                            selectedTab.toUpperCase() === "FOREX"
+                              ? "white"
+                              : "black"
+                          }
                           className="ps-2"
                         />
                       </div>
-                      <div className="col-8 color-white my-3 text-center">
+                      <div
+                        className={`col-8 ${
+                          selectedTab.toUpperCase() === "FOREX"
+                            ? "color-white"
+                            : "color-black"
+                        }  my-3 text-center`}
+                      >
                         Forex
                       </div>
                       <div className="col-2 my-3 dropdown">
                         <FontAwesomeIcon
                           icon={faAngleDown}
-                          color="white"
+                          color={
+                            selectedTab.toUpperCase() === "FOREX"
+                              ? "white"
+                              : "black"
+                          }
                           className=""
                         />
                         <div className="dropdown-content ">
                           <ul className="list-group bg-light navbar-border-radius-2">
                             <li className="list-group-item no-dec text-start">
                               <Link
-                                to="/trade/watchlist-forex"
+                                to="/forex/watchlist"
                                 className="text-start no-dec text-dark"
                               >
                                 Watchlist
@@ -230,7 +294,7 @@ const Sidebar = () => {
                             </li>
                             <li className="list-group-item no-dec text-start">
                               <Link
-                                to="/trade/trades-forex"
+                                to="/forex/trades"
                                 className="text-start no-dec text-dark"
                               >
                                 Trades
@@ -238,18 +302,10 @@ const Sidebar = () => {
                             </li>
                             <li className="list-group-item no-dec text-start">
                               <Link
-                                to="/trade/portfolio-forex"
+                                to="/forex/portfolio_position"
                                 className="text-start no-dec text-dark"
                               >
                                 Portfolio/Position
-                              </Link>
-                            </li>
-                            <li className="list-group-item no-dec text-start">
-                              <Link
-                                to="/trade/margin-forex"
-                                className="text-start no-dec text-dark"
-                              >
-                                Margin Management
                               </Link>
                             </li>
                           </ul>
@@ -262,21 +318,41 @@ const Sidebar = () => {
               <li>
                 <div className="container-fluid my-2">
                   <Link to="/report" className="text-decoration-none">
-                    <div className="row height-button bg-orange navbar-border-radius">
+                    <div
+                      className={`row height-button  ${
+                        selectedTab.toUpperCase() === "REPORT"
+                          ? "bg-orange"
+                          : "bg-white"
+                      }  navbar-border-radius`}
+                    >
                       <div className="col-2 text-start my-3">
                         <FontAwesomeIcon
                           icon={faAddressBook}
-                          color="white"
+                          color={
+                            selectedTab.toUpperCase() === "REPORT"
+                              ? "white"
+                              : "black"
+                          }
                           className="ps-2"
                         />
                       </div>
-                      <div className="col-8 color-white my-3 text-center">
+                      <div
+                        className={`col-8 ${
+                          selectedTab.toUpperCase() === "REPORT"
+                            ? "color-white"
+                            : "color-black"
+                        }  my-3 text-center`}
+                      >
                         Report
                       </div>
                       <div className="col-2 my-3 dropdown">
                         <FontAwesomeIcon
                           icon={faAngleDown}
-                          color="white"
+                          color={
+                            selectedTab.toUpperCase() === "REPORT"
+                              ? "white"
+                              : "black"
+                          }
                           className=""
                         />
                         <div className="dropdown-content ">
@@ -331,21 +407,41 @@ const Sidebar = () => {
               <li>
                 <div className="container-fluid my-2">
                   <Link to="/log" className="text-decoration-none">
-                    <div className="row height-button bg-orange navbar-border-radius">
+                    <div
+                      className={`row height-button  ${
+                        selectedTab.toUpperCase() === "LOG"
+                          ? "bg-orange"
+                          : "bg-white"
+                      }  navbar-border-radius`}
+                    >
                       <div className="col-2 text-start my-3">
                         <FontAwesomeIcon
                           icon={faBook}
-                          color="white"
+                          color={
+                            selectedTab.toUpperCase() === "LOG"
+                              ? "white"
+                              : "black"
+                          }
                           className="ps-2"
                         />
                       </div>
-                      <div className="col-8 color-white my-3 text-center">
+                      <div
+                        className={`col-8 ${
+                          selectedTab.toUpperCase() === "LOG"
+                            ? "color-white"
+                            : "color-black"
+                        }  my-3 text-center`}
+                      >
                         Log
                       </div>
                       <div className="col-2 my-3 dropdown">
                         <FontAwesomeIcon
                           icon={faAngleDown}
-                          color="white"
+                          color={
+                            selectedTab.toUpperCase() === "LOG"
+                              ? "white"
+                              : "black"
+                          }
                           className=""
                         />
                         <div className="dropdown-content ">
@@ -397,9 +493,19 @@ const Sidebar = () => {
                   </Link>
                 </div>
               </li>
+              <li className="logout-wrapper">
+                <div className="d-flex justify-content-center mt-3 ">
+                  <img src="/assets/images/logout.svg" alt="" />
+                  <span className="logout-text">Logout</span>
+                </div>
+              </li>
             </ul>
           </div>
         </nav>
+        <div className="d-flex justify-content-center mt-3 logout">
+          <img src="/assets/images/logout.svg" alt="" />
+          <span className="logout-text">Logout</span>
+        </div>
       </div>
     </>
   );

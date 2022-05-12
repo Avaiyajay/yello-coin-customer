@@ -1,0 +1,11 @@
+.add-box {
+    width: 83px;
+    height: 52px;
+    /* left: 1408px;
+    top: 167px; */
+    background: #702313;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

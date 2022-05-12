@@ -1,0 +1,46 @@
+.dashboard-container {
+    padding-top: 8px;
+}
+
+.header {
+    height: 96px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 124.5%;
+    letter-spacing: 0.01em;
+    color: #000000;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.ball-wrapper {
+    position: relative;
+    margin-right: 33px;
+}
+
+.reddot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 1px;
+    right: -2px;
+}
+
+.username {
+    margin-right: 6px;
+}
+
+.profile-image {
+    margin-right: 8px;
+}
+
+@media screen and (max-width : 600px) {
+    .overflow-x {
+        overflow-x: scroll;
+    }
+}

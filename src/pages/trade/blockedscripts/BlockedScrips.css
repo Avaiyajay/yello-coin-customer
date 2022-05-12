@@ -1,0 +1,10 @@
+.blocked-search {
+    flex-grow: 1;
+    padding: 0px 25px;
+}
+
+@media screen and (max-width : 1528px) {
+    .blocked-search {
+        display: none;
+    }  
+}
