@@ -1,9 +1,16 @@
 import React from "react";
 import "./Form.css";
 
-const Select = ({ placeholder, options, width }) => {
+const Select = ({ placeholder, options, width, borderRadius, height }) => {
   return (
-    <div className="date_width" style={{ width: `${width}px` }}>
+    <div
+      className="date_width"
+      style={{
+        width: `${width}px`,
+        borderRadius: `${borderRadius}px`,
+        height: `${height}px`,
+      }}
+    >
       <select
         name=""
         className="select-input"

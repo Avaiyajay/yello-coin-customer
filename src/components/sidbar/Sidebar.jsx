@@ -86,7 +86,7 @@ const Sidebar = () => {
                       >
                         Dashboard
                       </div>
-                      <div className="col-2 my-3 dropdown">
+                      {/* <div className="col-2 my-3 dropdown">
                         <FontAwesomeIcon
                           icon={faAngleDown}
                           color={
@@ -96,67 +96,8 @@ const Sidebar = () => {
                           }
                           className=""
                         />
-                        <div className="dropdown-content ">
-                          <ul className="list-group bg-light navbar-border-radius-2">
-                            <li className="list-group-item no-dec text-start">
-                              <Link
-                                to="/trade/trades-dashboard"
-                                className="text-start no-dec text-dark"
-                              >
-                                Trades
-                              </Link>
-                            </li>
-                            <li className="list-group-item no-dec text-start">
-                              <Link
-                                to="/trade/executed"
-                                className="text-start no-dec text-dark"
-                              >
-                                Executed Options
-                              </Link>
-                            </li>
-                            <li className="list-group-item no-dec text-start">
-                              <Link
-                                to="/trade/running"
-                                className="text-start no-dec text-dark"
-                              >
-                                Running Orders
-                              </Link>
-                            </li>
-                            <li className="list-group-item no-dec text-start">
-                              <Link
-                                to="/trade/summary"
-                                className="text-start no-dec text-dark"
-                              >
-                                Summary Reports
-                              </Link>
-                            </li>
-                            <li className="list-group-item no-dec text-start">
-                              <Link
-                                to="/trade/m2m"
-                                className="text-start no-dec text-dark"
-                              >
-                                M2M Alerts
-                              </Link>
-                            </li>
-                            <li className="list-group-item no-dec text-start">
-                              <Link
-                                to="/trade/user-dashboard"
-                                className="text-start no-dec text-dark"
-                              >
-                                User
-                              </Link>
-                            </li>
-                            <li className="list-group-item no-dec text-start">
-                              <Link
-                                to="/trade/trade-entry"
-                                className="text-start no-dec text-dark"
-                              >
-                                Trade Entry
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
+                        <div className="dropdown-content "></div>
+                      </div> */}
                     </div>
                   </Link>
                 </div>
@@ -317,7 +258,10 @@ const Sidebar = () => {
               </li>
               <li>
                 <div className="container-fluid my-2">
-                  <Link to="/report" className="text-decoration-none">
+                  <Link
+                    to="/report/ledgeReport"
+                    className="text-decoration-none"
+                  >
                     <div
                       className={`row height-button  ${
                         selectedTab.toUpperCase() === "REPORT"
@@ -359,15 +303,7 @@ const Sidebar = () => {
                           <ul className="list-group bg-light navbar-border-radius-2">
                             <li className="list-group-item no-dec text-start">
                               <Link
-                                to="/trade/trade-report"
-                                className="text-start no-dec text-dark"
-                              >
-                                Track Report
-                              </Link>
-                            </li>
-                            <li className="list-group-item no-dec text-start">
-                              <Link
-                                to="/trade/ledge-report"
+                                to="/report/ledgeReport"
                                 className="text-start no-dec text-dark"
                               >
                                 Ledge Report
@@ -375,26 +311,10 @@ const Sidebar = () => {
                             </li>
                             <li className="list-group-item no-dec text-start">
                               <Link
-                                to="/trade/deposit-report"
+                                to="/report/depositReport"
                                 className="text-start no-dec text-dark"
                               >
                                 Deposit Report
-                              </Link>
-                            </li>
-                            <li className="list-group-item no-dec text-start">
-                              <Link
-                                to="/trade/trial"
-                                className="text-start no-dec text-dark"
-                              >
-                                Trial Balances
-                              </Link>
-                            </li>
-                            <li className="list-group-item no-dec text-start">
-                              <Link
-                                to="/trade/client-report"
-                                className="text-start no-dec text-dark"
-                              >
-                                Client Cr/Dr Report
                               </Link>
                             </li>
                           </ul>
@@ -406,7 +326,10 @@ const Sidebar = () => {
               </li>
               <li>
                 <div className="container-fluid my-2">
-                  <Link to="/log" className="text-decoration-none">
+                  <Link
+                    to="/log/editDeleteLog"
+                    className="text-decoration-none"
+                  >
                     <div
                       className={`row height-button  ${
                         selectedTab.toUpperCase() === "LOG"
@@ -448,7 +371,7 @@ const Sidebar = () => {
                           <ul className="list-group bg-light navbar-border-radius-2">
                             <li className="list-group-item no-dec text-start">
                               <Link
-                                to="/trade/trade-edit"
+                                to="/log/editDeleteLog"
                                 className="text-start no-dec text-dark"
                               >
                                 Trade Edit/ Delete Log
@@ -456,31 +379,7 @@ const Sidebar = () => {
                             </li>
                             <li className="list-group-item no-dec text-start">
                               <Link
-                                to="/trade/user-edit"
-                                className="text-start no-dec text-dark"
-                              >
-                                User Edit Log
-                              </Link>
-                            </li>
-                            <li className="list-group-item no-dec text-start">
-                              <Link
-                                to="/trade/auto"
-                                className="text-start no-dec text-dark"
-                              >
-                                Auto Square Up Log
-                              </Link>
-                            </li>
-                            <li className="list-group-item no-dec text-start">
-                              <Link
-                                to="/trade/cross"
-                                className="text-start no-dec text-dark"
-                              >
-                                Cross Trade Log
-                              </Link>
-                            </li>
-                            <li className="list-group-item no-dec text-start">
-                              <Link
-                                to="/trade/rejection"
+                                to="/log/rejectionLog"
                                 className="text-start no-dec text-dark"
                               >
                                 Rejection Log

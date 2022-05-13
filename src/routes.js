@@ -1,7 +1,5 @@
 import {
   Dashboard,
-  Report,
-  Log,
   Trades,
   WatchList,
   PortfolioPosition,
@@ -9,6 +7,10 @@ import {
   ForexTrades,
   ForexWatchList,
   ForexPortfolioPosition,
+  LedgeReport,
+  DepositReport,
+  EditDeleteLog,
+  RejectionLog,
 } from "./pages/index";
 
 const routes = [
@@ -40,8 +42,30 @@ const routes = [
     element: ForexPortfolioPosition,
     exact: true,
   },
-  { path: "/report", name: "Report", element: Report, exact: true },
-  { path: "/log", name: "Log", element: Log, exact: true },
+  {
+    path: "/report/ledgeReport",
+    name: "Report",
+    element: LedgeReport,
+    exact: true,
+  },
+  {
+    path: "/report/depositReport",
+    name: "Report",
+    element: DepositReport,
+    exact: true,
+  },
+  {
+    path: "/log/editDeleteLog",
+    name: "Log",
+    element: EditDeleteLog,
+    exact: true,
+  },
+  {
+    path: "/log/rejectionLog",
+    name: "Log",
+    element: RejectionLog,
+    exact: true,
+  },
 ];
 
 export default routes;

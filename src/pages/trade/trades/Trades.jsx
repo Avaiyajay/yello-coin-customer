@@ -146,7 +146,13 @@ const Trades = () => {
             <div className="align-items-center d-flex">
               <div className="p-2">SHOW</div>
               <div>
-                <Select placeholder="10" width="80" options={options} />
+                <Select
+                  placeholder="10"
+                  height="35"
+                  borderRadius="3"
+                  width="80"
+                  options={options}
+                />
               </div>
               <div className="p-2">ENTRIES</div>
             </div>
