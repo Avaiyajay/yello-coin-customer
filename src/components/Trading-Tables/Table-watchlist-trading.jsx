@@ -6,6 +6,7 @@ import {
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Table-trading.css";
+import { Link } from "react-router-dom";
 
 const Table = () => {
   return (
@@ -51,7 +52,12 @@ const Table = () => {
           </thead>
           <tbody>
             <tr className="">
-              <td className="td-border ">NIFTY 31MAR2022</td>
+              <td className="td-border ">
+                <Link to={`/trades/specific-trade/${"First 31MAR2022"}`}>
+                  {" "}
+                  First 31MAR2022
+                </Link>
+              </td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
@@ -78,7 +84,12 @@ const Table = () => {
               </td>
             </tr>
             <tr className="">
-              <td className="td-border ">NIFTY 31MAR2022</td>
+              <td className="td-border ">
+                <Link to={`/trades/specific-trade/${"Second 31MAR2022"}`}>
+                  {" "}
+                  Second 31MAR2022
+                </Link>
+              </td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
               <td className="td-border  bg-danger color-white">17,518.00</td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
@@ -105,7 +116,9 @@ const Table = () => {
               </td>
             </tr>
             <tr className="">
-              <td className="td-border ">NIFTY 31MAR2022</td>
+              <td className="td-border ">
+                <Link to="/trades/specific-trade"> NIFTY 31MAR2022</Link>
+              </td>
               <td className="td-border  bg-danger color-white">17,518.00</td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
@@ -132,7 +145,9 @@ const Table = () => {
               </td>
             </tr>
             <tr className="">
-              <td className="td-border ">NIFTY 31MAR2022</td>
+              <td className="td-border ">
+                <Link to="/trades/specific-trade"> NIFTY 31MAR2022</Link>
+              </td>
               <td className="td-border  bg-danger color-white">17,518.00</td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
@@ -159,7 +174,9 @@ const Table = () => {
               </td>
             </tr>
             <tr className="">
-              <td className="td-border ">NIFTY 31MAR2022</td>
+              <td className="td-border ">
+                <Link to="/trades/specific-trade"> NIFTY 31MAR2022</Link>
+              </td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
               <td className="td-border  bg-danger color-white">17,518.00</td>
@@ -186,7 +203,9 @@ const Table = () => {
               </td>
             </tr>
             <tr className="">
-              <td className="td-border ">NIFTY 31MAR2022</td>
+              <td className="td-border ">
+                <Link to="/trades/specific-trade"> NIFTY 31MAR2022</Link>
+              </td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
@@ -213,7 +232,9 @@ const Table = () => {
               </td>
             </tr>
             <tr className="">
-              <td className="td-border ">NIFTY 31MAR2022</td>
+              <td className="td-border ">
+                <Link to="/trades/specific-trade"> NIFTY 31MAR2022</Link>
+              </td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
@@ -240,7 +261,9 @@ const Table = () => {
               </td>
             </tr>
             <tr className="">
-              <td className="td-border ">NIFTY 31MAR2022</td>
+              <td className="td-border ">
+                <Link to="/trades/specific-trade"> NIFTY 31MAR2022</Link>
+              </td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
@@ -267,7 +290,9 @@ const Table = () => {
               </td>
             </tr>
             <tr className="">
-              <td className="td-border ">NIFTY 31MAR2022</td>
+              <td className="td-border ">
+                <Link to="/trades/specific-trade"> NIFTY 31MAR2022</Link>
+              </td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
@@ -294,7 +319,9 @@ const Table = () => {
               </td>
             </tr>
             <tr className="">
-              <td className="td-border ">NIFTY 31MAR2022</td>
+              <td className="td-border ">
+                <Link to="/trades/specific-trade"> NIFTY 31MAR2022</Link>
+              </td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
@@ -321,7 +348,9 @@ const Table = () => {
               </td>
             </tr>
             <tr className="">
-              <td className="td-border ">NIFTY 31MAR2022</td>
+              <td className="td-border ">
+                <Link to="/trades/specific-trade"> NIFTY 31MAR2022</Link>
+              </td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
               <td className="td-border  bg-primary color-white">17,518.00</td>
@@ -349,7 +378,7 @@ const Table = () => {
             </tr>
           </tbody>
         </table>
-      </div>      
+      </div>
     </>
   );
 };

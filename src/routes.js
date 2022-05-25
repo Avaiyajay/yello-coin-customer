@@ -12,6 +12,7 @@ import {
   EditDeleteLog,
   RejectionLog,
   NewDashboard,
+  SpecificTrade,
 } from "./pages/index";
 
 const routes = [
@@ -28,6 +29,12 @@ const routes = [
     path: "/trade/blocked_scripts",
     name: "Trade",
     element: BlockedScrips,
+    exact: true,
+  },
+  {
+    path: "/trades/specific-trade/:trade_identifier",
+    name: "specific-trade",
+    element: SpecificTrade,
     exact: true,
   },
   {

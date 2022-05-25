@@ -11,6 +11,7 @@ import Trades from "./trade/Trades copy/Trades";
 import Watchlist from "./trade/Watchlist copy/Watchlist";
 import BlockedScrips from "./trade/blockedscripts/BlockedScrips";
 import PortfolioPosition from "./trade/porfolio-position/PortfolioPosition";
+import SpecificTrade from "./trade/specific-trade/SpecificTrade";
 
 // forex pages
 import { default as ForexTrades } from "./forex/trades/Trades";
@@ -40,4 +41,5 @@ export {
   EditDeleteLog,
   RejectionLog,
   NewDashboard,
+  SpecificTrade,
 };
