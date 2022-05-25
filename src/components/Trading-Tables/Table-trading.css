@@ -1,0 +1,31 @@
+/* .table-border-none{
+    border: none !important;
+} */
+
+.td-border{
+    border: 2px solid white;
+    border-radius: 10px !important;
+}
+
+.cross-size{
+    font-size: larger !important;
+}
+
+.focus-none-button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none;
+  }
+  
+.focus-none-button:hover{
+    background-color:blueviolet !important;
+}
+
+.the-button:focus {
+    outline: none;
+    box-shadow: none;
+    }
+    
+.bg-gray{
+    background-color: gray;
+}

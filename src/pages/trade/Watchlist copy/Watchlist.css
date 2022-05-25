@@ -1,0 +1,51 @@
+.fs-small {
+  font-size: 12px;
+  margin: 0px 0px !important;
+}
+
+.orange-trade {
+  color: #fab417 !important;
+}
+
+.border-right-none {
+  border-right: none !important;
+}
+
+.border-left-none {
+  border-left: none !important;
+}
+
+.Dropdown-arrow {
+  color: #fab417 !important;
+}
+
+.arrow-select {
+  color: #fab417 !important;
+  background-color: beige !important;
+  font-size: large !important;
+}
+
+.bg-select span {
+  color: aqua !important;
+}
+
+.arrow-class {
+  height: 40px !important;
+}
+
+.myClass option {
+  background-color: #fff !important;
+  color: #fab417 !important;
+
+}
+
+.border-none {
+  border: none;
+}
+
+
+.height-button{
+  height: 4rem;
+  border-radius: 15px;
+}
+

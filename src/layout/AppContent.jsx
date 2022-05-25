@@ -15,9 +15,9 @@ const AppContent = () => {
               exact={route.exact}
               name={route.name}
               element={
-                <PrivateRoute>
-                  <route.element />
-                </PrivateRoute>
+                // <PrivateRoute>
+                <route.element />
+                // </PrivateRoute>
               }
             />
           )

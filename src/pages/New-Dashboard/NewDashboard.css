@@ -1,0 +1,40 @@
+.bg-brown {
+  background-color: brown;
+}
+
+.color-brown {
+  color: brown;
+}
+
+.accounts-radius {
+  border-radius: 20px;
+}
+
+.margin-account {
+  margin: 0 7.5rem;
+}
+
+.font-smaller {
+  font-size: smaller;
+}
+
+.margin-cols {
+  margin-top: 4.5rem;
+}
+
+.btn-radius {
+  border-radius: 10px;
+}
+
+.B-radius {
+  border-radius: 15px;
+}
+
+.width-card {
+  width: 5rem !important;
+}
+
+.pos-rel {
+  position: relative !important;
+  top: 10px;
+}

@@ -1,5 +1,4 @@
 import React from "react";
-import SearchBox from "../../../components/form/SearchBox";
 import "./PortfolioPosition.css";
 
 const PorfolioHeaderCheckbox = ({ classname }) => {
@@ -38,10 +37,6 @@ const PorfolioHeaderCheckbox = ({ classname }) => {
           </label>
         </div>
       </div>
-
-      {/* <div className="position-relative portfolio-search">
-        <SearchBox />
-      </div> */}
     </>
   );
 };

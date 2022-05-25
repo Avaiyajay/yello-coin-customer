@@ -1,7 +1,7 @@
 import {
   Dashboard,
   Trades,
-  WatchList,
+  Watchlist,
   PortfolioPosition,
   BlockedScrips,
   ForexTrades,
@@ -11,12 +11,13 @@ import {
   DepositReport,
   EditDeleteLog,
   RejectionLog,
+  NewDashboard,
 } from "./pages/index";
 
 const routes = [
-  { path: "/", name: "Dashboard", element: Dashboard, exact: true },
-  { path: "/trade/watchlist", name: "Trade", element: WatchList, exact: true },
-  { path: "/trade/trades", name: "Trade", element: Trades, exact: true },
+  { path: "/dashboard", name: "Dashboard", element: NewDashboard, exact: true },
+  { path: "/trades/watchlist", name: "Trade", element: Watchlist, exact: true },
+  { path: "/trades/trading", name: "Trade", element: Trades, exact: true },
   {
     path: "/trade/portfolio_position",
     name: "Trade",
