@@ -206,6 +206,14 @@ const Navbar = () => {
                         Banned/Blocked Scripts
                       </li>
                     </Link>
+                    <Link
+                      to="/trades/transaction"
+                      className="text-start no-dec text-dark"
+                    >
+                      <li className="list-group-item no-dec text-start">
+                        Transaction
+                      </li>
+                    </Link>
                   </ul>
                 </div>
               </li>

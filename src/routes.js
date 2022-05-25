@@ -13,6 +13,7 @@ import {
   RejectionLog,
   NewDashboard,
   SpecificTrade,
+  Transaction,
 } from "./pages/index";
 
 const routes = [
@@ -35,6 +36,12 @@ const routes = [
     path: "/trades/specific-trade/:trade_identifier",
     name: "specific-trade",
     element: SpecificTrade,
+    exact: true,
+  },
+  {
+    path: "/trades/transaction",
+    name: "trade-transaction",
+    element: Transaction,
     exact: true,
   },
   {
